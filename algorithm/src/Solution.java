@@ -1,22 +1,23 @@
 import java.util.Scanner;
-
 class Solution {
-    public int solution(int n) {
-        int answer = 0;
-        int cnt = 1;
-        while(cnt<=n) {
-        	if(n%cnt==0) {
-        		answer += cnt;
-        	}
-        	cnt++;
-        }
-        return answer;
-    }
-    
-    static Scanner sc = new Scanner(System.in);
-    public static void main(String[] args){
-    	Solution s = new Solution();
-    	int n = Integer.parseInt(sc.nextLine());
-    	System.out.println(s.solution(n));
-    }
+	public int[] solution(int[] num_list, int n) {
+		int[] answer =new int[n];
+		for(int i=0; i<n; i++){
+			answer[i] = num_list[i];
+		}
+		return answer;
+	}
+	public void print(int[] array) {
+		for(int i=0;i<array.length;i++) {
+			System.out.print(array[i] + " ");
+		}
+	}
+	public static void main(String[] agrs){
+		Scanner sc = new Scanner(System.in);
+		int[] num_list = new int[] {2,1,6};
+		int n = Integer.parseInt(sc.nextLine());
+		Solution s = new Solution();
+		int [] returnArr = s.solution(num_list, n);
+		s.print(returnArr);
+	}
 }
