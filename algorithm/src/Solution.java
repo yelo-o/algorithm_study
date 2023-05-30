@@ -1,23 +1,32 @@
 import java.util.Scanner;
-class Solution {
-	public int[] solution(int[] num_list, int n) {
-		int[] answer =new int[n];
-		for(int i=0; i<n; i++){
-			answer[i] = num_list[i];
+
+public class Solution {
+	public static boolean isStringUppercase(String str) {
+		if(str.equals(str.toUpperCase())) { //대문자면 true 반환
+			return true;
 		}
-		return answer;
+		return false;
 	}
-	public void print(int[] array) {
-		for(int i=0;i<array.length;i++) {
-			System.out.print(array[i] + " ");
-		}
+	public static String[] changeCase(String[] s) {
+		return null;
 	}
-	public static void main(String[] agrs){
-		Scanner sc = new Scanner(System.in);
-		int[] num_list = new int[] {2,1,6};
-		int n = Integer.parseInt(sc.nextLine());
-		Solution s = new Solution();
-		int [] returnArr = s.solution(num_list, n);
-		s.print(returnArr);
+	public static String[] makeArr(String str) {
+		return str.split("");
 	}
+	public static void print(String[] arr) {
+		for(String i :arr) {
+        	System.out.println(i);
+        }
+	}
+    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        String a = sc.next();
+        String str = "aBCd";
+        System.out.println(str.charAt(0));
+//        System.out.println(makeArr(str));
+        for(String i :makeArr(str)) {
+        	System.out.println(i);
+        }
+//        System.out.println(isStringUppercase(str));
+    }
 }
